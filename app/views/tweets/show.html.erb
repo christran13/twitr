@@ -1,0 +1,16 @@
+<div class="jumbotron">
+	<h3>@<%= @tweet.user.username %>'s Tweet</h3>
+</div>
+
+<div class="well">
+	<p>
+		<%= image_tag @tweet.user.avatar.url, size: 25 %>
+		<%= @tweet.user.name %>
+		@<%= @tweet.user.username %>
+		• <%= time_ago_in_words(@tweet.created_at) %> ago.
+	</p>
+	<p><%= @tweet.message.html_safe %></p>
+</div>
+
+<%= link_to "Edit", edit_tweet_path(@tweet), class: "btn btn-warning" %>
+<%= link_to "Back", tweets_path, class: "btn btn-default" %>

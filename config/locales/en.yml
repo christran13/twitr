@@ -31,3 +31,34 @@
 
 en:
   hello: "Hello world"
+  activerecord:
+    attributes:
+      tweet:
+        message: "A Tweet"
+      user:
+        username: "A username"
+    errors:
+      models:
+        tweet:
+          attributes:
+            message:
+              blank: " is missing. You probably hit enter on accident..."
+              too_long: " is only 200 characters. Ain't Nobody Got Time Fa That!"
+        user:
+          attributes:
+            username:
+              blank: " is missing. You need to pick one. And pick one wisely."
+              taken: " must be unique. And someone already got to that one. Should've signed up sooner."
+
+
+
+
+  datetime:
+    distance_in_words:
+      x_minutes:
+        one: "1m"
+        other: "%{count}m"
+      about_x_hours:
+        one: "1h"
+        other: "%{count}h"
+        
